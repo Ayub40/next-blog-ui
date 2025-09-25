@@ -50,6 +50,7 @@ export default function LoginForm() {
 
     const handleSocialLogin = (provider: "google" | "github") => {
         console.log(`Login with ${provider}`);
+        // signIn()
     };
 
     return (
@@ -132,6 +133,9 @@ export default function LoginForm() {
                     <Button
                         variant="outline"
                         className="flex items-center justify-center gap-2"
+                        // onClick={() => handleSocialLogin("google")}
+                        // onClick={() => signIn()}
+
                         onClick={() =>
                             signIn("google", {
                                 callbackUrl: "/dashboard",
