@@ -89,6 +89,7 @@ export const authOptions: NextAuthOptions = {
             }
             return session;
         },
+        // async signIn({ user, account }) { }
     },
     secret: process.env.AUTH_SECRET,
     pages: {

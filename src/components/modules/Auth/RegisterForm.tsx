@@ -33,12 +33,15 @@ export default function RegisterForm() {
             password: "",
         },
     });
+    // navigation er jonno router use kora hoyse
     const router = useRouter();
     const onSubmit = async (values: FieldValues) => {
+        // console.log(values);
         try {
             const res = await register(values);
             if (res?.id) {
                 toast.success("User Registered Successfully");
+                // navigation er jonno router use kora hoyse
                 router.push("/login");
             }
         } catch (err) {
